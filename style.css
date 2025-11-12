@@ -990,7 +990,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: centre;
     background-color: #E0E0E0;
     color: #001C55;
     padding: 1em;
