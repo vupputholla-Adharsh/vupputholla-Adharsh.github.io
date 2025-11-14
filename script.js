@@ -36,4 +36,17 @@ window.onscroll = function ()
                         }
                         event.currentTarget.classList.add("active-link");
                         document.getElementById(tabname).classList.add("active-tab");
-                    }
+                    }// Close mobile menu when any menu item is clicked
+const menuToggle = document.getElementById("menu-toggle");
+const menuLinks = document.querySelectorAll(".menu a");
+
+menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        if (menuToggle.checked) {
+            menuToggle.checked = false;  // CLOSE MENU
+        }
+    });
+});
+
+
+
