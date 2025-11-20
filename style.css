@@ -778,10 +778,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            /* margin-top: 20px; */
+           
         }
         .box111{
-            width: 110%;
+            width: 100%;
         }
         .some_about{
             font-size: 20px;
@@ -967,7 +967,6 @@
         margin-right: 20px;
     }
 
-    }
 
 
 
@@ -983,7 +982,7 @@
     color: #001C55;
     padding: 1em;
     position:fixed;
-    z-index: 1;
+    z-index: 9999;
     top: 0;
     }
     body {
