@@ -115,6 +115,7 @@
     .about-col-1 img{
         max-height: 80%;
         max-width: 80%;
+        
         border-radius: 5% 0;
         border: 3px solid #72351C;
     }
@@ -801,9 +802,11 @@
         .box32{
             grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
         }
-        .flip-card{
-            width: 350px;
-        }
+       .flip-card {
+    width: 100%;
+    max-width: 350px;
+}
+
 
         .box01>h1, .box21>h1, .box31>h1, .box41>h1{
             font-size: 20px;
@@ -822,16 +825,16 @@
             margin-top: 17px;
         }
 
-        .box7{
-            width: 100%;
-        }
+        .box7 {
+    width: 100%;
+    max-width: 700px;
+}
+
 
         .box8>.calendar>.contrib-column{
             display: none;
         }
-        *{
-            margin: auto;
-        }
+       
 
     }
 
@@ -864,9 +867,11 @@
         .tool{
             margin-top: 10px;
         }
-        .box22{
-            width: 85%;
-        }
+       .box22 {
+    width: 90%;
+    max-width: 900px;
+}
+
         .box3{
             padding: 5px;
         }
@@ -939,10 +944,18 @@
 
     }
 
-    @media only screen and (max-width: 730px){
-    .about-col-1,.about-col-2{
+   @media (max-width: 880px){
+    .about-col-1,
+    .about-col-2 {
         flex-basis: 100%;
+        text-align: center;
     }
+
+    .about-col-1 img {
+        max-width: 60%;
+    }
+}
+
     .about-col-1{
         margin-bottom: 30px;
     }
@@ -973,6 +986,9 @@
     z-index: 1;
     top: 0;
     }
+    body {
+    padding-top: 60px;
+}
 
     .menu {
     display: flex;
@@ -1085,5 +1101,63 @@
     width: 100%;
     color: black;
     background-color: #fff;
+  }
+}
+
+
+/* =========== RESPONSIVE PATCH FIX =========== */
+
+/* Remove problematic universal margin:auto */
+@media (max-width: 400px){
+  /* removed * { margin:auto } */
+}
+
+/* Fix big grid items */
+.box32,
+.skills-list {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+}
+
+/* Fix flip-card fixed width */
+.flip-card {
+  width: 100%;
+  max-width: 350px;
+}
+
+/* Fix strict widths */
+.box7 {
+  width: 100%;
+  max-width: 700px;
+}
+.box22 {
+  width: 95%;
+  max-width: 900px;
+}
+
+/* Fix body under navbar overlap */
+body {
+  padding-top: 60px;
+}
+
+/* Fix About section layout collapse */
+@media (max-width: 880px){
+  .about-col-1,
+  .about-col-2 {
+      flex-basis: 100%;
+      text-align: center;
+  }
+  .about-col-1 img {
+      max-width: 60%;
+  }
+}
+
+/* Fix tool icons grid */
+.tool {
+  flex: 0 1 45%;
+}
+
+@media (max-width: 500px){
+  .tool {
+    flex: 0 1 100%;
   }
 }
